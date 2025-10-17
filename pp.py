@@ -1,8 +1,6 @@
 da = input('введите возраст собаки(в годах): ')
 g = 10.5
-if int(da) != float(da):
-    print('no')
-elif int(da) < 1:
+if int(da) < 1:
     print('возраст должен быть не меньше 1 года')
 elif int(da) == 1:
     da = g
