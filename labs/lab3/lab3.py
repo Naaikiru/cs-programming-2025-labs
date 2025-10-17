@@ -8,17 +8,12 @@ print((f'меня зовут {n} и мне {a} лет. ') * 10)
 # 2
 
 k = int(input('введите число от 1 до 9: '))
-print('таблица умножения:')
-print(f'{k} * 1 =', 1*k)
-print(f'{k} * 2 =', 2*k)
-print(f'{k} * 3 =', 3*k)
-print(f'{k} * 4 =', 4*k)
-print(f'{k} * 5 =', 5*k)
-print(f'{k} * 6 =', 6*k)
-print(f'{k} * 7 =', 7*k)
-print(f'{k} * 8 =', 8*k)
-print(f'{k} * 9 =', 9*k)
-print(f'{k} * 10 =', 10*k)
+print(f'таблица умножения числа {k}:')
+
+n = 1
+while n <= 10:
+    print(f'1 * {n} = ', k*n)
+    n += 1
 
 
 # 3
@@ -34,7 +29,7 @@ if n >= 0:
     f = n
     for i in range(2, n):
         f = f * i
-    print(f)
+    print(f'факториал числа {n}: ',f)
 else:
     print('нет, введите другое')
 
@@ -53,7 +48,7 @@ n = int(input('введите число: '))
 k = 0
 l = 1
 while k <= n:
-    print(k, end= ' ')
+    print(k, end= '; ')
     k, l = l, k + l
 
 
@@ -61,4 +56,7 @@ while k <= n:
 
 while True:
     n = input('Введите два числа через пробел: ')
-    print(int(n[0]) + int(n[2]))
+    f = n.split(' ')
+    print(int(f[0]) + int(f[1]))
+
+
