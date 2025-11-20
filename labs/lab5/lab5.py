@@ -23,4 +23,14 @@ print(max(c) // len(c))
 
 # 4
 
-d = 
+def st(d):
+    try:
+        return tuple(sorted(d))
+    except TypeError:
+        return d
+print(st((3, 1, 'rur', 5)))
+print(st((45, 3, 2, 8, 0)))
+
+
+# 5
+
