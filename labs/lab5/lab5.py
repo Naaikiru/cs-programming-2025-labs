@@ -34,3 +34,59 @@ print(st((45, 3, 2, 8, 0)))
 
 # 5
 
+e = {
+    'apples': 200,
+    'milk': 150,
+    'noodle': 300,
+    'chicken': 400,
+    'beef': 600,
+    'dumplings': 1100
+}
+emin = min(e, key=e.get)
+eminp = e[emin]
+emax = max(e, key=e.get)
+emaxp = e[emax]
+print(f'минимальная цена у {emin} - {eminp}')
+print(f'максимальная цена у {emax} - {emaxp}')
+
+
+# 6
+
+f = ['apple', 200, 'kiwi', 450, 275, 'banana']
+stri = []
+inti = []
+for i in (f):
+    if type(i) == str:
+        stri.append(i)
+    if type(i) == int:
+        inti.append(i)
+f = {
+    stri[0]: inti[0],
+    stri[1]: inti[1],
+    stri[2]: inti[2],
+}
+print(f)
+
+
+# 7
+
+j = {
+    "привет": "hello",
+    "пока": "bye",
+    "игра": "game",
+    "курица": "chiken",
+    "диназавр": "dinosaur",
+    "свитер": "sweater"
+}
+fd = False
+jp = input('введите слово на русском: ')
+for eng, rus in j.items():
+    if jp == rus:
+        print('перевод на английский: ', eng)
+        fd = True
+if not fd:
+    print('слово не найденов словаре')
+
+
+# 8
+
