@@ -1,15 +1,33 @@
-st = [('Мария', [3, 4, 4]), ('Кюнней', [3, 5, 5]), ('Андрей', [4, 5, 4]), ('Айсен', [5, 5, 4]), ('Дарина', [2, 2, 3])]
-sl = {
-    st[0][0]: round(sum(st[0][1])/3, 1),
-    st[1][0]: round(sum(st[1][1])/3, 1),
-    st[2][0]: round(sum(st[2][1])/3, 1),
-    st[3][0]: round(sum(st[3][1])/3, 1),
-    st[4][0]: round(sum(st[4][1])/3, 1)
-}
-st2 = []
-st3 = []
-for st1 in sl.items():
-    st2.append(st1[1])
-    st3.append(st1[0])
-if max(st2):
-    print(f'{st3[st2.index(max(st2))]} имеет наивысший средний балл: {max(st2)}')
+r = int(input())
+
+print('1 матрица: ')
+r1 =[]
+for i in range(r):
+    k = []
+    h = input()
+    k.append(h.split(' '))
+    r1.append(k)
+    # if  ValueError:
+    #     print('no')
+    #     print(quit())
+print(len(r1[0]))
+
+# if len(r1[0]) != r:
+#     print('no')
+#     print(quit())
+
+# print('2 матрица: ')
+# r2 =[]
+# for i in range(r):
+#     k = []
+#     h = input()
+#     k.append(h.split(' '))
+#     r2.append(k)
+#     # if  ValueError:
+#     #     print('no')
+#     #     print(quit())
+# if len(r2[0]) != r:
+#     print('no')
+#     print(quit())
+
+# print(r1, r2)

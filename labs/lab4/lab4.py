@@ -103,12 +103,14 @@ else:
 # 10
 
 h = int(input('введите число: '))
-def IsPrime(n):
-    d = 2
-    while n % d != 0:
-        d += 1
-    return d == n
-if IsPrime(h) == True:
+def is_prime(n):
+    if n <= 1:
+         return False
+    for i in range(2, int(n**0.5) + 1):
+         if n % i == 0:
+            return False
+    return True
+if is_prime(h) == True:
     print(f'{h} - простое число')
 else:
     print(f'{h} - состовное число')
