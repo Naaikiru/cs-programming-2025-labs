@@ -144,3 +144,5 @@ for st1 in sl.items():
     st3.append(st1[0])
 if max(st2):
     print(f'{st3[st2.index(max(st2))]} имеет наивысший средний балл: {max(st2)}')
+
+    
