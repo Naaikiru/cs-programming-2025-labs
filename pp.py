@@ -1,16 +1,16 @@
-r = int(input())
+# r = int(input())
 
-print('1 матрица: ')
-r1 =[]
-for i in range(r):
-    k = []
-    h = input()
-    k.append(h.split(' '))
-    r1.append(k)
-    # if  ValueError:
-    #     print('no')
-    #     print(quit())
-print(len(r1[0]))
+# print('1 матрица: ')
+# r1 =[]
+# for i in range(r):
+#     k = []
+#     h = input()
+#     k.append(h.split(' '))
+#     r1.append(k)
+#     # if  ValueError:
+#     #     print('no')
+#     #     print(quit())
+# print(len(r1[0]))
 
 # if len(r1[0]) != r:
 #     print('no')
@@ -31,3 +31,9 @@ print(len(r1[0]))
 #     print(quit())
 
 # print(r1, r2)
+
+a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+a = ', '.join(a)
+if '3' in a:
+    a = a.replace('3', '30', 1)
+    print(a)
