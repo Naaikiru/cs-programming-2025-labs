@@ -31,7 +31,10 @@ h = [int(h[0]), int(h[1])]
 for i in range(h[0], h[1]+1):
     if is_prime(i) == True:
         k.append(i)
-print(k)
+if len(k) == 0:
+    print('Error!')
+else:
+    print(k)
 
 
 # 4
