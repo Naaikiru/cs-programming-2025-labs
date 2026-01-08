@@ -14,6 +14,11 @@ x = str(f(x)[0]) + f(x)[1]
 print(x)
 
 
+#2
+
+
+
+
 # 3
 
 def is_prime(n):
