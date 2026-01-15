@@ -1,24 +1,41 @@
-x = int(input('введите сумму, которую хотите вложить в банк: '))
-y = int(input('введите срок (в годах): '))
-def deposit_profit(a, n):
-    # увеличение от суммы (блоки по 10000 от 0)
-    blocks = a // 10000
-    increase = min(blocks * 0.003, 0.05)
-    
-    total = a
-    for year in range(1, n + 1):
-        if year <= 3:
-            base = 0.03
-        elif year <= 6:
-            base = 0.05
-        else:
-            base = 0.02
-        
-        rate = base + increase
-        total *= (1 + rate)
-    
-    profit = total - a
-    return round(profit, 2)
+a = float(input('Вклад в банке в размере: '))
+n = float(input('Срок: '))
+deprate = 0
+deprate3 = 3
+deprate46 = 5
+deprate6 = 2
+profit = 0
+every10deprate = 0
 
-# Проверка
-print(deposit_profit(x, y))  
+if a < 30000: print('Минимальный вклад - 30 000 рублей!')
+
+elif a >= 30000:
+    every10deprate += ((a+profit)//10000) * 0.3
+    if every10deprate <= 5: deprate += ((a+profit)//10000) * 0.3
+    elif every10deprate >= 5: deprate += 5
+
+    if n <= 3:
+        for i in range(int(n)):
+            anew = a + profit
+            profit += anew*(deprate3+deprate)/100
+
+    elif n >= 4 and n <= 6:
+        for i in range(3):
+            anew = a + profit
+            profit += anew*(deprate3+deprate)/100
+        for i in range(int(n)-3):
+            anew = a + profit
+            profit += anew*(deprate46+deprate)/100
+    
+    elif n > 6:
+        for i in range(3):
+            anew = a + profit
+            profit += anew*(deprate3+deprate)/100
+        for i in range(3):
+            anew = a + profit
+            profit += anew*(deprate46+deprate)/100
+        for i in range(int(n)-6):
+            anew = a + profit
+            profit += anew*(deprate6+deprate)/100
+
+print(round(profit, 2))
