@@ -19,11 +19,11 @@ def vkl(x, y):
                 return (round(x, 2))
             break
 
-    # elif 4 < y < 6:
-    #     for i in range(y):
-    #         c = (c*(x//10_000) + 5)/100
-    #         if c >= 5:
-    #             c = 5/100
+    elif 4 < y < 6:
+        for i in range(y):
+            c = (c*(x//10_000) + 5)/100
+            if c >= 5:
+                c = 5/100
                             
 
 print(vkl(vk, sr))
