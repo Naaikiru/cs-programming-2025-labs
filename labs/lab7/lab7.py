@@ -109,3 +109,37 @@ ids = [
 ids = sorted(ids, key=lambda x: x['staff'], reverse=True)
 
 print(ids[:3])
+
+
+# 8
+
+pls = [
+    ("Lockdown", 5),
+    ("Evacuation", 4),
+    ("Data Wipe", 3),
+    ("Routine Scan", 1)
+]
+
+pls1 = list(map(lambda x: f'Protocol {x[0]} - Criticality {x[1]}', pls))
+
+print(pls1)
+
+
+# 9
+
+shs = [6, 12, 8, 24, 10, 4]
+shs = list(filter(lambda x: 8 <= x <= 12, shs))
+print(shs)
+
+
+# 10
+
+es = [
+    {"name": "Agent Cole", "score": 78},
+    {"name": "Dr. Weiss", "score": 92},
+    {"name": "Technician Moore", "score": 61},
+    {"name": "Researcher Lin", "score": 88}
+]
+
+es1 = max(es, key=lambda x: x['score'])
+print(es1['name'], es1['score'])
