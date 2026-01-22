@@ -1,9 +1,10 @@
-es = [
-    {"name": "Agent Cole", "score": 78},
-    {"name": "Dr. Weiss", "score": 92},
-    {"name": "Technician Moore", "score": 61},
-    {"name": "Researcher Lin", "score": 88}
+pls = [
+    ("Lockdown", 5),
+    ("Evacuation", 4),
+    ("Data Wipe", 3),
+    ("Routine Scan", 1)
 ]
 
-es1 = max(es, key=lambda x: x['score'])
-print(es1['name'], es1['score'])
+pls1 = list(map(lambda x: f'Protocol {x[0]} - Criticality {x[1]}', pls))
+
+print(pls1)
