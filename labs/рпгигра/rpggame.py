@@ -246,7 +246,7 @@ class Game:
         print()
         
         while True:
-            choice = input("Ваш выбор (1-3): ")
+            choice = input("Ваш выбор (1-4): ")
             if choice == "1":
                 race = Race.HUMAN
                 break
