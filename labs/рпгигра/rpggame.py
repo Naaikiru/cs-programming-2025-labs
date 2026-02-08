@@ -64,19 +64,19 @@ class Character:
             self.base_attack = 20
             self.base_defense = 25
             self.base_agility = 10
-        
+        # Текущие характеристики (могут меняться в бою):
         self.current_hp = self.base_hp
         self.max_hp = self.base_hp
         self.attack = self.base_attack
         self.defense = self.base_defense
         self.agility = self.base_agility
-        
+        # Инвентарь и снаряжение:
         self.inventory: List[Item] = []
         self.max_inventary = 10
         self.equipped_weapon: Optional[Item] = None
         self.equipped_armor: Optional[Item] = None
         self.gold = 0
-    
+    # Пересчитывает характеристики с учетом экипировки
     def update_stats(self):
         self.max_hp = self.base_hp
         self.attack = self.base_attack
